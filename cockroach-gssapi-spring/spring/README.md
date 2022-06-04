@@ -3,7 +3,7 @@ A Secure CockroachDB Cluster with Kerberos, Spring Data R2DBC and HAProxy acting
 
 ## Setup
 
-[1] Build Spring App to produce Jar file as referenced in start.sh and Dockerfile. Move produced Jar file to this directory. You could add the mvn package command to the Dockerfile instead of doing it this way, but I found it streamlined the testing process once I knew my app was configured correctly.
+[1] Build Spring App to produce Jar file as referenced in start.sh and Dockerfile. Move produced Jar file to this directory. You could add the mvn package command to the Dockerfile instead of doing it this way, but I found it streamlined the testing process once I knew my app was configured correctly. \
 [2] Run up.sh which will start all containers including the Kerberos KDC, HAProxy load balancer, CockroachDB nodes (3 of them) and finally the Spring app from the Jar.
 
 ## Notes
