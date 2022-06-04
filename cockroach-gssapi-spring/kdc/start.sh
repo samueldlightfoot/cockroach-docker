@@ -7,6 +7,8 @@ set -e
 # by cockroach.
 
 kadmin.local -q "ktadd -k /keytab/crdb.keytab postgres/lb@EXAMPLE.COM"
+kadmin.local -q "ktadd -k /keytab/crdb.keytab roach/lb@EXAMPLE.COM"
+kadmin.local -q "ktadd -k /keytab/crdb.keytab roach@EXAMPLE.COM"
 
 # This is an example of overriding postgres SPN
 kadmin.local -q "ktadd -k /keytab/crdb.keytab customspn/lb@EXAMPLE.COM"

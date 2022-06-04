@@ -8,4 +8,6 @@ A Secure CockroachDB Cluster with Kerberos, Spring Data R2DBC and HAProxy acting
 
 ## Notes
 
-It is worth looking at Config.java in the kerberos-postgres-client app for which config is relevant to connect. 
+* It is worth looking at Config.java in the kerberos-postgres-client app for which config is relevant to connect. 
+* kerberosServerName = 'customspn' (as defined in kdc\Dockerfile). This must be injected into GSSAuthenticationHandler (I hard coded it for the time being)
+* 
