@@ -13,7 +13,7 @@ COPY krb5.conf /etc/krb5.conf
 
 RUN kdb5_util create -s -P kpass \
   && kadmin.local -q "addprinc -pw psql roach@EXAMPLE.COM" \
-  && kadmin.local -q "addprinc -pw psql roach/lb@EXAMPLE.COM" \  
+  && kadmin.local -q "addprinc -pw psql roach/lb@EXAMPLE.COM" \
   && kadmin.local -q "addprinc -randkey postgres/lb@EXAMPLE.COM" \
   && kadmin.local -q "addprinc -randkey customspn/lb@EXAMPLE.COM"   # This is a custom SPN in case krbsrvname is required
 
